@@ -22,7 +22,8 @@ JavaScript Code Style
   - [switch](#switch)
 - [Loops](#loops)
   - [for](#for)
-  - [for (var i in obj)](#for-var-i-in-obj)
+  - [while](#while)
+  - [do while](#do-while)
 - [Operators](#operators)
   - ['with' operator](#with-operator)
   - [Comparison operators](#comparison-operators)
@@ -363,7 +364,7 @@ Statements should always end with a semicolon.
 
 ### switch
 
-The switch statement should be written as in the example:
+The `switch` statement should be written as in the example:
 
 ```js
 switch (value) {
@@ -387,25 +388,37 @@ switch (value) {
 
 ### for
 
-If possible, [Array.prototype.forEach](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) should be used instead of a `for` loop.
+The `for` statement should be written as in the example:
 
 ```js
-[1, 2, 3].forEach(function (value) {
-    console.log(value);
-});
+for (init; condition; update) {
+    statements;
+}
 ```
-Performance-critical parts of the code can use a `for` statement.
 
 [&#8593; back to TOC](#table-of-contents)
 
-### for (var i in obj)
+### while
 
-If possible, [Object.keys](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys) should be used instead of a `for-in` construction.
+The `while` statement should be written as in the example:
 
 ```js
-Object.keys(obj).forEach(function (key) {
-    console.log(key);
-});
+while (!isDone) {
+    doSomething();
+    isDone = moreToDo();
+}
+```
+
+[&#8593; back to TOC](#table-of-contents)
+
+### do while
+
+The `do...while` statement should be written as in the example:
+
+```js
+do {
+    statements;
+} while (condition);
 ```
 
 [&#8593; back to TOC](#table-of-contents)
